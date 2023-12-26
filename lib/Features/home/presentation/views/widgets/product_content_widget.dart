@@ -21,7 +21,7 @@ class ProductContentWidget extends StatelessWidget {
       child: Card(
         elevation: 3,
         child: Container(
-          height: 500.h,
+          height: 520.h,
           width: 50.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(AppConstants.radius10r),
@@ -61,10 +61,10 @@ class ProductContentWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(AppConstants.padding8h),
+                  padding: EdgeInsets.only(bottom: AppConstants.padding8h),
                   child: SizedBox(
                     width: 180.w,
-                    height: 100.h,
+                    height: 80.h,
                     child: CachedNetworkImage(
                       imageUrl: productModel.image!,
                       errorWidget: (context, url, error) => const Icon(
@@ -74,7 +74,7 @@ class ProductContentWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(AppConstants.padding2h),
+                  padding: EdgeInsets.only(bottom: AppConstants.padding2h),
                   child: Text(
                     productModel.title!,
                     maxLines: 2,
@@ -91,7 +91,7 @@ class ProductContentWidget extends StatelessWidget {
                   child: Text(
                     productModel.description!,
                     textAlign: TextAlign.start,
-                    maxLines: 2,
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
